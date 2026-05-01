@@ -40,6 +40,20 @@ public class AuctionApplication extends Application {
         stage.show();
     }
 
+    public static void showLoginWindow() {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(AuctionApplication.class.getResource("/com/uet/auction/view/login.fxml"));
+            fxmlLoader.setControllerFactory(springContext::getBean);
+            Parent root = fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.setTitle("Hệ thống Đấu giá Trực tuyến - UET (New Window)");
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     @Override
     public void stop() {
         springContext.close();

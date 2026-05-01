@@ -1,6 +1,7 @@
 package com.uet.auction.controller;
 
 import com.uet.auction.model.User;
+import com.uet.auction.model.Bidder;
 
 import javax.swing.*;
 import java.awt.*;
@@ -26,8 +27,8 @@ public class AuctionGUI extends JFrame {
         // Sự kiện khi nhấn nút
         bidButton.addActionListener(e -> {
             // Tạo request giả lập (Sau này lấy từ ô nhập liệu)
-            User MinhDuc = new User(1,"Minhduc20", User.Role.USER,"12345",200000);
-            BidRequest request = new BidRequest(MinhDuc, 101, 5000.0);
+            User minhDuc = new Bidder(1, "Minhduc20", "12345", 200000);
+            BidRequest request = new BidRequest(minhDuc, 101, 5000.0);
 
             // Gọi sang Controller
             boolean result = auctionController.onBidButtonClick(request);

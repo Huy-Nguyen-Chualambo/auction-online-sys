@@ -9,6 +9,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 import java.net.URL;
@@ -16,6 +17,7 @@ import java.time.LocalDateTime;
 import java.util.ResourceBundle;
 
 @Component
+@Scope("prototype")
 public class AdminView extends BaseController implements Initializable {
 
     private final DataStorage dataStorage;

@@ -16,6 +16,7 @@
             <TextField fx:id="usernameField" layoutX="216.0" layoutY="120.0" promptText="Username" />
             <PasswordField layoutX="215.0" layoutY="182.0" promptText="Password" />
             <Button layoutX="216.0" layoutY="276.0" mnemonicParsing="false" onAction="#handleLogin" prefHeight="26.0" prefWidth="150.0" text="Login" />
+            <Button layoutX="216.0" layoutY="315.0" mnemonicParsing="false" onAction="#handleNewWindow" prefHeight="26.0" prefWidth="150.0" text="Test Multi-User (New Window)" textFill="#2e7d32" />
             <VBox layoutX="187.0" layoutY="39.0" prefHeight="69.0" prefWidth="210.0">
                <children>
                   <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="84.0" prefWidth="233.0" text="AUCTION SYSTEM" textAlignment="CENTER" textFill="#a93b3b">

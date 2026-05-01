@@ -9,6 +9,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 import java.net.URL;
@@ -18,6 +19,7 @@ import java.util.ResourceBundle;
  * Controller for the Bidder view.
  */
 @Component
+@Scope("prototype")
 public class UserView extends BaseController implements Initializable {
 
     @FXML

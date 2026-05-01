@@ -8,12 +8,14 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
 @Component
+@Scope("prototype")
 public class SellerView extends BaseController implements Initializable {
 
     private final DataStorage dataStorage;

@@ -15,6 +15,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
@@ -22,6 +23,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 @Component
+@Scope("prototype")
 public class LoginView implements Initializable {
 
     @FXML
@@ -92,6 +94,11 @@ public class LoginView implements Initializable {
             stage.setTitle("Auction System - " + selectedRole + ": " + username);
             stage.show();
         }
+    }
+
+    @FXML
+    public void handleNewWindow(ActionEvent actionEvent) {
+        AuctionApplication.showLoginWindow();
     }
 }
 
